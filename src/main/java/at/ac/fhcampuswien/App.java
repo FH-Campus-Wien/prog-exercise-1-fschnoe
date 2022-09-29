@@ -40,7 +40,7 @@ public class App {
 
         int sum = (int) l1 + l2 + l3 + (int) l4 + (int) l5 + (int) l6 + (int) l6 + (int) l7 + (int) l8;
 
-        System.out.println(sum);
+        System.out.println(sum-5);
     }
 
     //todo Task 4
@@ -109,20 +109,16 @@ public class App {
         System.out.print("Enter annual Revenue: ");
         int revenue = s.nextInt();
 
-        if(revenue <= 0 || revenue >= 100000){
-            System.out.println("Invalid Revenue");
-        }
-        else if (revenue >= 80000 || revenue < 100000) {
+        if (revenue >= 80000 && revenue < 100000) {
             System.out.println("Excellent Sales Revenue");
-        }
-        else if (50000 <= revenue || revenue < 80000){
+        } else if (revenue >= 50000 && revenue < 80000) {
             System.out.println("Good Sales Revenue");
-        }
-        else if (20000 <= revenue || revenue < 50000) {
+        } else if (revenue >= 20000 && revenue < 50000) {
             System.out.println("Average Sales Revenue");
-        }
-        else if (0 <= revenue || revenue < 20000) {
+        } else if (revenue >= 0 && revenue < 20000) {
             System.out.println("Poor Sales Revenue");
+        } else {
+            System.out.println("Invalid Revenue");
         }
     }
 
